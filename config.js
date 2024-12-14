@@ -7,3 +7,4 @@ export const PINGER_HOST = process.env.PINGER_HOST;
 export const CHANNEL_CHAT_ID = process.env.CHANNEL_CHAT_ID;
 export const PING_INTERVAL = Number(process.env.PING_INTERVAL);
 export const IS_NOT_ALIVE_CHECKS = Number(process.env.IS_NOT_ALIVE_CHECKS);
+export const CHAT_IDS_FILE = "chat_ids.json";

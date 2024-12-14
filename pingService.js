@@ -19,7 +19,6 @@ export async function pingServiceSetup(onDisconnect, onReconnect) {
   while (true) {
     const isAlive = await pingHost();
     pingsQueue.push(isAlive);
-    console.log(pingsQueue);
     if (pingsQueue.length <= IS_NOT_ALIVE_CHECKS) continue;
     const falsesCount = pingsQueue.reduce(
       (count, value) => (value === false ? count + 1 : count),
