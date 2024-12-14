@@ -36,8 +36,34 @@ export const getImageUrl = async () => {
   return imageUrl;
 };
 
-export const getDTEKMessage = async () => {
-  const info = await fetch("https://www.dtek-oem.com.ua/ua/ajax", {
+async function fetchWithRetry(url, options, retries = 3, callback = null) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
+
+      if (callback) {
+        callback(null, data); // Call the callback with no error and the data
+      }
+
+      return data;
+    } catch (err) {
+      if (i < retries - 1) {
+        console.log(`Retrying... (${i + 1})`);
+        await new Promise((res) => setTimeout(res, 2000));
+      } else {
+        if (callback) {
+          callback(err, null); // Call the callback with the error and no data
+        }
+        throw err;
+      }
+    }
+  }
+}
+
+export const getDTEKMessage = async (callback = null) => {
+  const url = "https://www.dtek-oem.com.ua/ua/ajax";
+  const options = {
     headers: {
       accept: "application/json, text/javascript, */*; q=0.01",
       "accept-language": "en-US,en;q=0.9",
@@ -60,15 +86,22 @@ export const getDTEKMessage = async () => {
     },
     body: "method=getHomeNum&data%5B0%5D%5Bname%5D=city&data%5B0%5D%5Bvalue%5D=%D0%BC.+%D0%9E%D0%B4%D0%B5%D1%81%D0%B0&data%5B1%5D%5Bname%5D=street&data%5B1%5D%5Bvalue%5D=%D0%B2%D1%83%D0%BB.+%D0%9C%D0%B0%D0%BD%D0%B5%D0%B6%D0%BD%D0%B0",
     method: "POST",
-  });
+  };
 
-  const data = (await info.json()).data["40"];
+  try {
+    const response = await fetchWithRetry(url, options, 3, callback);
+    const data = response.data?.["40"];
 
-  if (!data || !data.sub_type || !data.start_date || !data.end_date) return "";
+    if (!data || !data.sub_type || !data.start_date || !data.end_date)
+      return "";
 
-  return `<b>🟡 ДТЕК сказал света не быть 🟡</b>
+    return `<b>🟡 ДТЕК сказал света не быть 🟡</b>
 
 <b>Тип:</b> ${data.sub_type}
 <b>Начало отключения:</b> ${data.start_date}
 <b>Окончание отключения:</b> ${data.end_date}`;
+  } catch (err) {
+    console.error("Failed to fetch DTEK message:", err);
+    return "";
+  }
 };
