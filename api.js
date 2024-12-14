@@ -93,7 +93,7 @@ export const getDTEKMessage = async (callback = null) => {
     const data = response.data?.["40"];
 
     if (!data || !data.sub_type || !data.start_date || !data.end_date)
-      return "";
+      return `<b>🟢 ДТЕК сказал света должен быть 🟢</b>`;
 
     return `<b>🟡 ДТЕК сказал света не быть 🟡</b>
 
@@ -102,6 +102,6 @@ export const getDTEKMessage = async (callback = null) => {
 <b>Окончание отключения:</b> ${data.end_date}`;
   } catch (err) {
     console.error("Failed to fetch DTEK message:", err);
-    return "";
+    return `<b>🟢 ДТЕК сказал света должен быть 🟢</b>`;
   }
 };
