@@ -10,6 +10,8 @@ services:
       - .:/usr/src/app # Горячая перезагрузка для разработки
     networks:
       - app_network
+    env_file:
+      - stack.env
 
 networks:
   app_network:
