@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: elbot
+    ports:
+      - "3000:3000" # Проброс порта
+    volumes:
+      - .:/usr/src/app # Горячая перезагрузка для разработки
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
