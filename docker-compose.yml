@@ -6,8 +6,6 @@ services:
     container_name: elbot
     ports:
       - "3000:3000" # Проброс порта
-    volumes:
-      - .:/usr/src/app # Горячая перезагрузка для разработки
     networks:
       - app_network
     env_file:
