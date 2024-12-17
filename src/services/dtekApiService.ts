@@ -43,7 +43,7 @@ export const getScheduleImage = async (): Promise<string | null> => {
 };
 
 export const getStatusByDTEK = async (): Promise<TAddress | null> => {
-  const data = await fetch("https://www.dtek-oem.com.ua/ua/ajax", {
+  const response = await fetch("https://www.dtek-oem.com.ua/ua/ajax", {
     headers: {
       accept: "application/json, text/javascript, */*; q=0.01",
       "accept-language": "en-US,en;q=0.9",
@@ -70,9 +70,13 @@ export const getStatusByDTEK = async (): Promise<TAddress | null> => {
     method: "POST",
   });
 
-  if (data.status === 200)
-    return ((await data.json()) as TDTEKResponse).data["4"];
-  return null;
+  if (response.status !== 200) return null;
+
+  const data = ((await response.json()) as TDTEKResponse).data["4"];
+
+  if (data.start_date.length === 0 || data.end_date.length === 0) return null;
+
+  return data;
 };
 
 export type TAddress = {
