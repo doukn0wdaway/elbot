@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import { IBotChatInfo, IChatInfo } from "./types";
-const db = new Database("database.sqlite");
+const db = new Database("data/database.sqlite");
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS chats (
