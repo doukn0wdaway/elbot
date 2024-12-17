@@ -1,0 +1,289 @@
+{
+  "result": true,
+  "data": {
+    "2": {
+      "sub_type": "Стабілізаційне відключення (Згідно графіку погодинних відключень)",
+      "start_date": "16:00 16.12.2024",
+      "end_date": "19:00 16.12.2024",
+      "type": "2",
+      "sub_type_reason": [
+        "4.2"
+      ],
+      "voluntarily": null
+    },
+    "16": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "18": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "22": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "24": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "26": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "28": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "30": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "32": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "34": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "36": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "38": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "40": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "1.1"
+      ],
+      "voluntarily": null
+    },
+    "42": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "1.1"
+      ],
+      "voluntarily": null
+    },
+    "18/1": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20/корп.1": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20/корп.2": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20/корп.3": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20/корп.4": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "20/корп.5": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "32/30": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "34/5": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "36/14": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "16/10": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "18/31": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "22/35": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    },
+    "26/3": {
+      "sub_type": "",
+      "start_date": "",
+      "end_date": "",
+      "type": "",
+      "sub_type_reason": [
+        "6.2"
+      ],
+      "voluntarily": null
+    }
+  },
+  "showCurOutageParam": true,
+  "showCurSchedule": true,
+  "showTableSchedule": true,
+  "updateTimestamp": "17:02 16.12.2024"
+}

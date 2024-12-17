@@ -10,11 +10,12 @@ RUN apt-get update && apt-get install -y iputils-ping
 COPY package*.json ./
 
 # Install dependencies (if needed)
-RUN npm install
+RUN yarn
 
 # Copy the script
 COPY . .
 
-# Command to run the script
-CMD ["npm", "start"]
+# Command to run build and start
+CMD ["sh", "-c", "yarn build && yarn start"]
+
 
