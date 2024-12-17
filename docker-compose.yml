@@ -1,12 +1,17 @@
 services:
   app:
     build: .
-    container_name: elbot-ts
+    container_name: elbot
     networks:
       - app_network
     env_file:
       - stack.env
+    volumes:
+      - elbot-db:/usr/src/app/database.sqlite
 
 networks:
   app_network:
     driver: bridge
+
+volumes:
+  - elbot-db
