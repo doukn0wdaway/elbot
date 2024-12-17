@@ -1,11 +1,7 @@
-version: "3.8"
-
 services:
   app:
     build: .
-    container_name: elbot
-    ports:
-      - "3000:3000" # Проброс порта
+    container_name: elbot-ts
     networks:
       - app_network
     env_file:

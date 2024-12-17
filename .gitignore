@@ -1,3 +1,5 @@
 .env
-node_modules/*
 chat_ids.json
+build
+node_modules
+database.sqlite
