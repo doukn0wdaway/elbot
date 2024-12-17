@@ -15,7 +15,7 @@ export const msgBuilder = {
 `,
 
   dtekStatus: (status: TAddress | null) => {
-    if (!status) return `🟢 <b>ДТЕК сказал света должен быть</b> 🟢`;
+    if (status === null) return `🟢 <b>ДТЕК сказал света должен быть</b> 🟢`;
     return `
 🟡 <b>ДТЕК сказал света не быть</b> 🟡 
 
