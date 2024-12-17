@@ -4,3 +4,4 @@ build
 node_modules
 database.sqlite
 data/database.sqlite
+.env.production
