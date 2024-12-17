@@ -26,6 +26,13 @@ const formatChatInfo = (ctx: Context): IBotChatInfo | null => {
   return { chatId, name };
 };
 
+bot.on("message", async (ctx, next) => {
+  const chatInfo = formatChatInfo(ctx);
+  if (chatInfo) addChat(chatInfo);
+
+  next();
+});
+
 bot.on("new_chat_members", async (ctx) => {
   const isThisBotAdded = ctx.message.new_chat_members.some(
     (member) => member.id === ctx.botInfo.id,
