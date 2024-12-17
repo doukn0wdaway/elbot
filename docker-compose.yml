@@ -14,4 +14,4 @@ networks:
     driver: bridge
 
 volumes:
-  - elbot-db
+  elbot-db:
