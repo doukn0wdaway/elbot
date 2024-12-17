@@ -13,7 +13,9 @@ const onDisconnect = async () => {
 
   const dtekStatus = await getStatusByDTEK();
   const message =
-    msgBuilder.electricityIsNotHere() + msgBuilder.dtekStatus(dtekStatus);
+    msgBuilder.electricityIsNotHere() +
+    "\n" +
+    msgBuilder.dtekStatus(dtekStatus);
 
   sendHTMLMessageToAllChats(message, "yes");
 };
@@ -23,7 +25,7 @@ const onReconnect = async () => {
 
   const dtekStatus = await getStatusByDTEK();
   const message =
-    msgBuilder.electricityIsHere() + msgBuilder.dtekStatus(dtekStatus);
+    msgBuilder.electricityIsHere() + "\n" + msgBuilder.dtekStatus(dtekStatus);
 
   sendHTMLMessageToAllChats(message, "yes");
 };
