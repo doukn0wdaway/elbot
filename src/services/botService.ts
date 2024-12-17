@@ -91,7 +91,6 @@ export const startBotService = () => {
 };
 
 export const sendHTMLMessage = (chatId: string, text: string) => {
-  console.log(text);
   bot.telegram.sendMessage(chatId, text, { parse_mode: "HTML" });
 };
 
