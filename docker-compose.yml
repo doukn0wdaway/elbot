@@ -7,7 +7,7 @@ services:
     env_file:
       - stack.env
     volumes:
-      - elbot-db:/usr/src/app/database.sqlite
+      - elbot-db:/usr/src/app/data/
 
 networks:
   app_network:
